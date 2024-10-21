@@ -9,8 +9,11 @@ for a digest `d` produced as `d  = H(SECRET || M1 || PADDING)`, `d` represents t
 digest after processing `SECRET || M1 || PADDING`.
 
 Therefore, if we consider a new digest `dd = H(M2, state=d)`, where the previous digest is provided
-as the initial state of the hash, this is equivalent to calculating
+as the initial state of the hash (`d`), this is equivalent to calculating
 `H(SECRET || M1 || PADDING || M2)`
+
+`M2` can be built in such a way that it overrides `M1` when processed by the destination application.
+
 
 To run it: `python3 lea.py`
 
