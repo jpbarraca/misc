@@ -1,9 +1,10 @@
 # Length Extention Attack
 
-Implements a PoC of a Length Extention Attack to SHA256
-The SHA256 implementation shows what data is actually processed by the digest
+Implements a PoC of a Length Extension Attack to SHA256.
+The SHA256 implementation is modified and shows what data is actually processed by the digest.
 
 This works because:
+
 for a digest `d` produced as `d  = H(SECRET || M1 || PADDING)`, `d` represents the state of the
 digest after processing `SECRET || M1 || PADDING`.
 
